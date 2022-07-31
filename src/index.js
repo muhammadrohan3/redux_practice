@@ -1,3 +1,5 @@
+import {compose , pipe} from 'lodash'
+
 console.log("Hello World!");
 function sayHello()
 {
@@ -5,3 +7,9 @@ function sayHello()
 }
 let fn = sayHello; 
  fn()
+
+ function greet()
+ {
+    console.log()
+ }
+  
