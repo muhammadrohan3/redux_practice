@@ -1,15 +1,15 @@
-import {compose , pipe} from 'lodash'
-
-console.log("Hello World!");
-function sayHello()
+import store from './store';
+import { bugAdded, bugRemoved, bugResolved} from './actions';
+const unsubscribe = store.subscribe(()=>
 {
-    return "hello world"
-}
-let fn = sayHello; 
- fn()
+    console.log("Store changed=>" , store.getState())
+})
+store.dispatch(bugAdded("Bug_1"));
 
- function greet()
- {
-    console.log()
- }
-  
+store.dispatch(bugResolved(1));
+
+store.dispatch(bugRemoved(1));
+
+
+
+console.log(store.getState( ))
