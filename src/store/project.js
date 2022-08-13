@@ -11,7 +11,6 @@ const slice = createSlice(
                 project.push({ id: ++id, project: action.payload.project })
             }
         }
-
     }
 
 )
