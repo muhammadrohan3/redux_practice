@@ -1,4 +1,5 @@
 import store from './store/store';
+import {loadBugs} from './store/bugs'
 // import {bugAdded, bugResolved , bugRemoved, getUnResolvedBugs} from './store/bugs';
 // import { projectAdded } from './store/project';
 // import { bugAssigned } from './store/member';
@@ -30,12 +31,14 @@ import store from './store/store';
 // import { configureStore} from "@reduxjs/toolkit";
 // const store = configureStore();
 
-store.dispatch((dispatch , getState)=>{
-    dispatch({type : "bugs",bugs : [1,2,3]} )
-    console.log(getState())
-})
+// store.dispatch((dispatch , getState)=>{
+//     dispatch({type : "bugs",bugs : [1,2,3]} )
+//     console.log(getState())
+// })
 
-store.dispatch({
-    type : "error", 
-    payload : {message: "An error occured"}
-})
+// store.dispatch({
+//     type : "error", 
+//     payload : {message: "An error occured"}
+// })
+
+store.dispatch(loadBugs())

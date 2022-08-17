@@ -3,12 +3,14 @@ import reducer from './reducer';
 import logger from '../middleware/logger'
 import func from '../middleware/func'
 import toast from '../middleware/toast'
+import api from '../middleware/api'
 const store = configureStore(
   {
     reducer, 
     middleware : [...getDefaultMiddleware(), 
     logger({destination : "console"}), 
-    toast 
+    toast , 
+    api
   ], 
     
   }
