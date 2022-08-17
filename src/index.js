@@ -1,5 +1,5 @@
 import store from './store/store';
-import {loadBugs} from './store/bugs'
+import {addBug, bugAdded, loadBugs, resolveBug, assignUser} from './store/bugs'
 // import {bugAdded, bugResolved , bugRemoved, getUnResolvedBugs} from './store/bugs';
 // import { projectAdded } from './store/project';
 // import { bugAssigned } from './store/member';
@@ -42,3 +42,12 @@ import {loadBugs} from './store/bugs'
 // })
 
 store.dispatch(loadBugs())
+
+// setTimeout(()=>{loadBugs()}, 2000)
+
+// store.dispatch(addBug({description : 'h3ll0'}))
+setTimeout(()=>{store.dispatch(resolveBug( 1))}, 2000)
+
+setTimeout(() => {
+    store.dispatch(assignUser(1, "user1"))
+}, 4000);
