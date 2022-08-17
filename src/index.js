@@ -1,5 +1,5 @@
-import store from './store/store';
-import {addBug, bugAdded, loadBugs, resolveBug, assignUser} from './store/bugs'
+// import store from '../bugs-frontend/src/store/store';
+// import {addBug, bugAdded, loadBugs, resolveBug, assignUser} from '../bugs-frontend/src/store/bugs'
 // import {bugAdded, bugResolved , bugRemoved, getUnResolvedBugs} from './store/bugs';
 // import { projectAdded } from './store/project';
 // import { bugAssigned } from './store/member';
